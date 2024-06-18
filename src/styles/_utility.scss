@@ -1,0 +1,17 @@
+.web-heading {
+font-size: var(--app-font-size-h1);
+font-weight: var(--web-font-weight-semibold);
+color: var(--web-primary-color);
+}
+.button {
+    // width: 158px;
+    // height: 50px;
+    border-radius: 10px;
+    color: var(--web-white-color);
+    background-color: var(--web-primary-color);
+    border: none;
+    text-align: center;
+}
+.button:hover {
+    background-color: aqua;
+}
