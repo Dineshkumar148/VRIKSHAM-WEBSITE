@@ -1,7 +1,25 @@
 .web-heading {
   font-size: var(--app-font-size-h1);
   font-weight: var(--web-font-weight-semibold);
-  color: var(--web-primary-color);
+  color: var(--web-font-h1-color);
+}
+
+.web-para-header {
+  font-size: var(--web-font-size-card-para);
+  font-weight: var(--web-font-weight-normal);
+  color: var(--web-font-para-color);
+}
+
+.web-sub-heading {
+  font-size: var(--web-font-size-h2);
+  font-weight: var(--web-font-weight-semibold);
+  color: var(--web-font-h1-color);
+}
+
+.web-paragraph {
+  font-size: var(--web-font-size-para);
+  font-weight: var(--web-font-weight-normal);
+  color: var(--web-font-para-body-color);
 }
 
 .button {
@@ -27,10 +45,25 @@
   border: 1px solid #e5f4f2;
 }
 
+.button-primary {
+  background-color: var(--web-primary-color);
+  color: var(--web-white-color);
+  transition: transform 0.3s, background-color 0.3s;
+  border: 1px solid #e5f4f2;
+}
+
+.button-primary:hover {
+  background-color: var(--web-primary-color);
+  color: var(--web-white-color);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .btn-outline-primary {
   border: 1px solid #ffff;
   background-color: var(--web-primary-color);
   color: var(--web-white-color);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .btn-outline-primary:hover 
@@ -38,5 +71,48 @@
   border:  1px solid #FFFF;
   color: var(--web-primary-color);
   background-color: var(--web-white-color);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  html {
+      --app-font-size-h1: 56px;
+      --web-font-size-h2: 36px;
+      --web-font-size-para: 18px;
+      --web-font-size-card-para: 18px;
+      --web-font-size-h3: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+      --app-font-size-h1: 48px;
+      --web-font-size-h2: 32px;
+      --web-font-size-para: 18px;
+      --web-font-size-card-para: 16px;
+      --web-font-size-h3: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+      --app-font-size-h1: 40px;
+      --web-font-size-h2: 28px;
+      --web-font-size-para: 16px;
+      --web-font-size-card-para: 14px;
+      --web-font-size-h3: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+      --app-font-size-h1: 32px;
+      --web-font-size-h2: 24px;
+      --web-font-size-para: 14px;
+      --web-font-size-card-para: 14px;
+      --web-font-size-h3: 16px;
+  }
+}
