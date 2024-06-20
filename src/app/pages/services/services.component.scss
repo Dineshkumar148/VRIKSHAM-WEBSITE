@@ -4,6 +4,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s, box-shadow 0.3s;
 }
+.service-section{
+    background-color: #F9FAFB;
+    
+}
 .service-card:hover{
     background-color: #24774A;
     color: white;
@@ -19,3 +23,41 @@
     width: 100px;
     height: auto;
 }
+.box-icon {
+    background-color: #24774A;
+    color: white;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.service-card:hover .box-icon {
+    background-color: #F9FAFB;
+    color: #24774A;
+}
+.get-started-button {
+    background-color: #24774a;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .get-started-button:hover {
+    background-color: #1f5d3b;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+  }
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.carousel-indicatorsP{
+    background-color: #1f5d3b;
+
+}
+
+
+ 
