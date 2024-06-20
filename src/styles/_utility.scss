@@ -1,5 +1,5 @@
 .web-heading {
-  font-size: var(--app-font-size-h1);
+  font-size: var(--web-font-size-h1);
   font-weight: var(--web-font-weight-semibold);
   line-height: var(--web-h1-line-height);
   color: var(--web-font-h1-color);
@@ -90,7 +90,7 @@
 /* Responsive styles */
 @media (max-width: 1200px) {
   html {
-    --app-font-size-h1: 56px;
+    --web-font-size-h1: 56px;
     --web-font-size-h2: 36px;
     --web-font-size-para: 18px;
     --web-font-size-card-para: 18px;
@@ -100,7 +100,7 @@
 
 @media (max-width: 992px) {
   html {
-    --app-font-size-h1: 48px;
+    --web-font-size-h1: 48px;
     --web-font-size-h2: 32px;
     --web-font-size-para: 18px;
     --web-font-size-card-para: 16px;
@@ -110,7 +110,7 @@
 
 @media (max-width: 768px) {
   html {
-    --app-font-size-h1: 40px;
+    --web-font-size-h1: 40px;
     --web-font-size-h2: 28px;
     --web-font-size-para: 16px;
     --web-font-size-card-para: 14px;
@@ -120,7 +120,7 @@
 
 @media (max-width: 576px) {
   html {
-    --app-font-size-h1: 32px;
+    --web-font-size-h1: 32px;
     --web-font-size-h2: 24px;
     --web-font-size-para: 14px;
     --web-font-size-card-para: 14px;
