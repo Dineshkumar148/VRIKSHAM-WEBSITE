@@ -178,5 +178,119 @@
         font-size: 14px;
         line-height: 28px;
     }
-    // .sap_sm_text {}
+}
+.offering_card {
+    border: 1px solid #F1F1F1;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    // padding: 2vw;
+}
+.offering_icon {
+    background-color: #edebfd;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offering_icon1 {
+    background-color: #f0fbf3;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offering_icon2 {
+    background-color: #e8e8ea;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offering_icon3 {
+    background-color: #feeded;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hr_line {
+    height: 2px;
+    background-color: #55544F; 
+}
+.achievement_icon {
+    background-color: #f0fbf3;
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievement_icon1 {
+    background-color: #D7F8F4;
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievement_icon2 {
+    background-color: #EFD7F8;
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievement_icon3 {
+    background-color: #EBF8D7;
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 576px) {
+    .achievement_icon {
+        height: 50px;
+        width: 50px;
+    }
+    .achievement_icon1 {
+        height: 50px;
+        width: 50px;
+    }
+    .achievement_icon2 {
+        height: 50px;
+        width: 50px;
+    }
+    .achievement_icon3 {
+        height: 50px;
+        width: 50px;
+    }
+}
+.change_business_card {
+    color: white;
+    background-color: #24774A;
+    border-radius: 50px;
+    font-size: .7vw;
+    // height: 2vw;
+    display: flex;
+    align-items: center;
+    // padding: .6vw;
+    
+    
+}
+.change_business_card h5 {
+    margin: 0;
 }
