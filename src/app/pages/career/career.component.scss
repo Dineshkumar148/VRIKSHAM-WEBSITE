@@ -1,0 +1,70 @@
+* {
+  font-family: "Poppins";
+}
+.career-section {
+  background-color: #f9fafb;
+}
+
+.bi-window-plus {
+  color: #cb41f4;
+}
+
+.bi-clock {
+  color: #f7776d;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon-wrapper:hover .icon {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+.icon-wrapper:hover h5,
+.icon-wrapper:hover p {
+  color: #007bff;
+}
+
+.career-bg-image {
+  background-image: url("/assets/images/Job openings-carrer-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.job-opening-career {
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.job-opening-career:hover {
+  transform: translateY(-10px);
+  background-color: #f0f8ff;
+}
+
+.about-carrier {
+  color: #1f1f1f;
+  font-weight: 600;
+  opacity: 70%;
+}
+
+@media (max-width: 992px) {
+  .icon-wrapper {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .icon-wrapper .icon {
+    margin-bottom: 0.5rem;
+  }
+}
