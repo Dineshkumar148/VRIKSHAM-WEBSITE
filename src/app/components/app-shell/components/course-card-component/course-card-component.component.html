@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex flex-wrap justify-content-between">
+            @for (course of courses; track $index) {
+            <div class="d-flex flex-column justify-content-center align-items-center rounded-3  mb-3 course-icon-container"
+                [class]="{'dimmed': hovered && hovered !== course}" (mouseover)="onHover(course)"
+                (mouseout)="onLeave()">
+                <img [src]="course.img" [alt]="course.alt" class="course-image">
+                <p class="pt-3">{{course.name}}</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>
