@@ -6,6 +6,8 @@ import { CareerComponent } from './pages/career/career.component';
 import { TrainingComponent } from './pages/training/training.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FullStackDevelopmentComponent } from './pages/full-stack-development/full-stack-development.component';
+import { SapTrainingComponent } from './pages/services/sap-training/sap-training.component';
+
 
 export const routes: Routes = [
   {
@@ -20,6 +22,10 @@ export const routes: Routes = [
       {
         path: 'services',
         component: ServicesComponent,
+      },
+      {
+        path: 'sap-training',
+        component: SapTrainingComponent,
       },
       {
         path: 'career',
