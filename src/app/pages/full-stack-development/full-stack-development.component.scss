@@ -1,0 +1,29 @@
+* {
+    font-family: "Poppins";
+  }
+  .career-section {
+    background-color: #f9fafb;
+  }
+  .about-carrier {
+    color: #1f1f1f;
+    font-weight: 600;
+    opacity: 70%;
+  }
+  .career-list li{
+    padding-top: 20px;
+    color: #1F1F1F;
+    opacity: 70%;
+
+  }
+  .get-started-button {
+    background-color: #24774a;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .get-started-button:hover {
+    background-color: #1f5d3b;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+  }
