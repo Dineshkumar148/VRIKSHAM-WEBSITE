@@ -7,6 +7,7 @@ import { TrainingComponent } from './pages/training/training.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FullStackDevelopmentComponent } from './pages/full-stack-development/full-stack-development.component';
 import { SapTrainingComponent } from './pages/services/sap-training/sap-training.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 
 export const routes: Routes = [
@@ -42,6 +43,10 @@ export const routes: Routes = [
       { path: 'career/full-stack-development', 
         component: FullStackDevelopmentComponent
      },
+     {
+      path: 'privacy-policy',
+      component: PrivacyPolicyComponent,
+    },
     ],
   },
 ];
