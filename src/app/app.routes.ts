@@ -8,6 +8,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FullStackDevelopmentComponent } from './pages/full-stack-development/full-stack-development.component';
 import { SapTrainingComponent } from './pages/services/sap-training/sap-training.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 
 export const routes: Routes = [
@@ -39,6 +40,10 @@ export const routes: Routes = [
       {
         path: 'contact-us',
         component: ContactUsComponent,
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
       },
       { path: 'career/full-stack-development', 
         component: FullStackDevelopmentComponent

@@ -10,6 +10,63 @@ import { CourseCardComponentComponent } from '../../../components/app-shell/comp
   styleUrl: './sap-training.component.scss',
 })
 export class SapTrainingComponent implements AfterViewInit {
+
+  cardDetails = [
+    {
+      icon: 'assets/images/library_icon.svg',
+      heading: 'Learning Format',
+      paragraph: 'Offline(Classroom)'
+    },
+    {
+      icon: 'assets/images/duration-icon.svg',
+      heading: 'Duration',
+      paragraph: '6 Months'
+    },
+    {
+      icon: 'assets/images/placement-icon.svg',
+      heading: 'Placements',
+      paragraph: '100%'
+    },
+    {
+      icon: 'assets/images/emi-icon.svg',
+      heading: 'No Cost EMI Starts',
+      paragraph: 'at ₹4999/month*'
+    }
+  ];
+
+  benefits = [
+    {
+      icon: 'assets/images/vriksham-classroom-format.svg',
+      heading: 'Classroom Format',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    },
+    {
+      icon: 'assets/images/vriksham-real-time-projects.svg',
+      heading: 'Work on real-life Industry Projects',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    },
+    {
+      icon: 'assets/images/vriksham-placement-assistance.svg',
+      heading: 'Placement Assistance',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    },
+    {
+      icon: 'assets/images/vriksham-emi.svg',
+      heading: 'EMI No Cost EMI',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    },
+    {
+      icon: 'assets/images/vriksham-live-class.svg',
+      heading: 'Live online class test',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    },
+    {
+      icon: 'assets/images/vriksham-skill.svg',
+      heading: 'Recognized skill certifications',
+      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }
+  ];
+
   ngAfterViewInit(): void {
     const paths = [
       document.getElementById('anim1') as unknown as SVGAnimateElement,
