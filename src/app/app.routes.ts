@@ -18,6 +18,11 @@ export const routes: Routes = [
     component: AppShellComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
         path: 'home',
         // loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)
         component: HomeComponent,
