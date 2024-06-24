@@ -4,8 +4,8 @@
 
 .overlap-img {
     position: absolute;
-    top: 26%;
-    left: calc(50% + 40px); /* Move 20px to the right */
+    top: 27%;
+    left: calc(56% + 40px); /* Move 20px to the right */
     transform: translate(-50%, -50%);
 }
 
@@ -16,8 +16,8 @@
 
 .overlap-img1 {
     position: absolute;
-    top: 26%;
-    left: calc(80% + 45px); /* Move 20px to the right */
+    top: 28%;
+    left: calc(85% + 45px); /* Move 20px to the right */
     transform: translate(-50%, -50%);
 }
 .bg-sec {
@@ -35,33 +35,33 @@
         top: 33%;
         left: 90%; /* Adjust this as needed for smaller screens */
     }
-    // .sap_tech1 {
-    //     display: none;
-    // }
-    // .sap_btn1 {
-    //     display: none;
-    // }
 }
 
-@media (max-width: 768px) { /*  */
+@media (max-width: 821px) { /*  */
+    .web-heading {
+        font-size: 4.4vw;
+    }
     .overlap-img {
         top: 30%;
-        left: 56%; /* Adjust this as needed for smaller screens */
+        left: 69%; /* Adjust this as needed for smaller screens */
     }
     .overlap-img1 {
-        top: 30%;
-        left: 90%; /* Adjust this as needed for smaller screens */
+        top: 32%;
+        left: 100%; /* Adjust this as needed for smaller screens */
     }
 }
 
 @media (max-width: 576px) { /*  */
+    .web-heading {
+        font-size: 5.4vw;
+    }
     .overlap-img {
-        left: 62%; /* Adjust this as needed for smaller screens */
-        top: 32%;
+        left: 64%; /* Adjust this as needed for smaller screens */
+        top: 49%;
     }
     .overlap-img1 {
         left: 95%; /* Adjust this as needed for smaller screens */
-        top: 32%;
+        top: 49%;
     }
     .sap_sm_text {
         font-size: 3.5vw;
@@ -113,15 +113,15 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 821px) {
     .teacher {
         padding-top: 30px !important;
         padding-left: 25px !important;
 
     }
     .teacher1 {
-        top: 15%;
-        left: 95%;
+        top: 25%;
+        left: 90%;
         height: 60px;
         aspect-ratio: 1;
     }
@@ -294,3 +294,32 @@
 .change_business_card h5 {
     margin: 0;
 }
+.blog_card {
+    border-radius: 30px;
+    box-shadow: 8px 10px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.arrow-prev {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #24774A;
+    margin-top: 200px;
+    margin-left: 40px;
+}
+.arrow-next {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #24774A;
+    margin-top: 200px;
+    margin-right: 40px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    fill: #ffffff !important; /* or simply `white` */
+  }
+  .carousel-control-prev-icon svg {
+    fill: #ffffff !important; /* or simply `white !important` */
+  }
+  .carousel-control-prev-icon::before {
+    color: #ffffff !important; /* or simply `white !important` */
+  }
