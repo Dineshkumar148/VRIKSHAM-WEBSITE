@@ -8,7 +8,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FullStackDevelopmentComponent } from './pages/full-stack-development/full-stack-development.component';
 import { SapTrainingComponent } from './pages/services/sap-training/sap-training.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-
+import { BlogListComponent } from './pages/blog-list/blog-list.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 
 export const routes: Routes = [
   {
@@ -44,9 +45,18 @@ export const routes: Routes = [
         path: 'about-us',
         component: AboutUsComponent,
       },
-      { path: 'career/full-stack-development', 
-        component: FullStackDevelopmentComponent
-     },
+      {
+        path: 'career/full-stack-development',
+        component: FullStackDevelopmentComponent,
+      },
+      {
+        path: 'blog',
+        component: BlogListComponent 
+      },
+      { 
+        path: 'post/:id', 
+        component: BlogDetailComponent 
+      },
     ],
   },
 ];
