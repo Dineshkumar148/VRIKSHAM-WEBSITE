@@ -3,11 +3,12 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BlogService } from '../blog.service';
 import { CommonModule, SlicePipe } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { TopHeaderSectionComponent } from '../../top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-blog-detail',
   standalone: true,
-  imports: [RouterModule, SlicePipe, CommonModule],
+  imports: [RouterModule, SlicePipe, CommonModule, TopHeaderSectionComponent],
   templateUrl: './blog-detail.component.html',
   styleUrls: ['./blog-detail.component.scss']
 })

@@ -1,4 +1,6 @@
-<div class="container-fluid px-3 px-md-5">
+
+<!-- header section component -->
+<div class="row web-card-bg px-3 px-md-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li><a routerLink="/home" class="text-secondary text-decoration-none">Home
@@ -8,12 +10,11 @@
             <li class="ps-3 nav-active fw-medium">Blog Details</li>
         </ol>
     </nav>
-    @if (blog) {
-    <div>
-        <h1>{{ blog.title }}</h1>
-        <p>{{ blog.content }}</p>
-    </div>
-    }
+ </div>
+<app-top-header-section [heading]=" blog.title" [paragraph]="blog.content">
+  
+</app-top-header-section>
+<div class="container-fluid px-3 px-md-5">
     @if (otherBlogs.length > 0) {
     <div class="py-5">
         <h2 class="text-center">Latest Blogs & Posts</h2>
