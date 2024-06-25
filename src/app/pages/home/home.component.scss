@@ -1,37 +1,92 @@
+.stop_text {
+    animation: fadeIn 5s forwards;
+}
+@keyframes fadeIn {
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.button:hover {
+    color: var(--web-primary-color);
+    background-color: var(--web-white-color);
+    border: 1px solid var(--web-primary-color);
+    cursor: pointer;
+}
+
 .position-relative {
     position: relative;
 }
 
 .overlap-img {
     position: absolute;
-    top: 27%;
-    left: calc(56% + 40px); /* Move 20px to the right */
+    top: 20%;
+    left: calc(40% + 40px); /* Move 20px to the right */
     transform: translate(-50%, -50%);
+    animation: moveBottomToTop 3s linear forwards;
+}
+@keyframes moveBottomToTop {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .sap-text {
     position: relative;
     z-index: 1;
 }
-
-.overlap-img1 {
-    position: absolute;
-    top: 28%;
-    left: calc(85% + 45px); /* Move 20px to the right */
-    transform: translate(-50%, -50%);
+.sap-text1 {
+    display: inline-block;
+    animation: slideInBottom 3s forwards 1s; /* Starts after a delay */
 }
+// }
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlap-img1-wrapper {
+    position: absolute;
+    bottom: 67%; /* Start from the bottom */
+    right: 0; /* Start from the right */
+}
+
+.overlap-img1-animi {
+    animation: moveBottomRightToTopLeft 3s linear;
+}
+
+@keyframes moveBottomRightToTopLeft {
+    from {
+        transform: translate(80%, 80%); /* Start from bottom right */
+    }
+    to {
+        transform: translate(0%, 0%); /* Move to original position */
+    }
+}
+
 .bg-sec {
     background-color: #F9FAFB;
 }
+
 /* Responsive adjustments */
-
-
 @media (max-width: 992px) { /* */
     .overlap-img {
         top: 32%;
         left: 60%; /* Adjust this as needed for smaller screens */
     }
-    .overlap-img1 {
+    .overlap-img1-wrapper {
         top: 33%;
         left: 90%; /* Adjust this as needed for smaller screens */
     }
@@ -42,26 +97,37 @@
         font-size: 4.4vw;
     }
     .overlap-img {
-        top: 30%;
-        left: 69%; /* Adjust this as needed for smaller screens */
+        top: 24%;
+        left: 52%; /* Adjust this as needed for smaller screens */
+    }
+    .overlap-img1-wrapper {
+        top: 23%;
+        left: 90%; /* Adjust this as needed for smaller screens */
     }
     .overlap-img1 {
-        top: 32%;
-        left: 100%; /* Adjust this as needed for smaller screens */
+        height: 8vw;
+        aspect-ratio: 1;
     }
 }
 
 @media (max-width: 576px) { /*  */
     .web-heading {
-        font-size: 5.4vw;
+        font-size: 6vw !important;
     }
     .overlap-img {
-        left: 64%; /* Adjust this as needed for smaller screens */
-        top: 49%;
+        height: 8vw;
+        aspect-ratio: 1;
+        left: 60%; /* Adjust this as needed for smaller screens */
+        top: 40%;
     }
+    .overlap-img1-wrapper {
+        left: 100%; /* Adjust this as needed for smaller screens */
+        top: 40%;
+    }
+    
     .overlap-img1 {
-        left: 95%; /* Adjust this as needed for smaller screens */
-        top: 49%;
+        height: 8vw;
+        aspect-ratio: 1;
     }
     .sap_sm_text {
         font-size: 3.5vw;
@@ -73,25 +139,40 @@
 
 .teacher1 {
     top: 15%;
-    left: 90%;
+    left: 85%;
     transform: translate(-50%, -50%);
 }
 .teacher2 {
-    top: 8%;
+    top: 3%;
     left: 55%;
     transform: translate(-50%, -50%);
 }
 .teacher3 {
     top: 28%;
-    left: 31%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 .teacher4 {
     top: 87%;
-    left: 26%;
+    left: 20%;
     transform: translate(-50%, -50%);
 }
 
+.teacher1, .teacher2, .teacher3, .teacher4 {
+    transform-origin: center center;
+    transform: scale(1);
+    animation: zoomIn 3s ease-out ;
+}
+
+/* Animation keyframes */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
 /* Responsive adjustments for teacher images */
 @media (max-width: 992px) {
     .teacher1 {
@@ -121,8 +202,8 @@
     }
     .teacher1 {
         top: 25%;
-        left: 90%;
-        height: 60px;
+        left: 83%;
+        height: 57px;
         aspect-ratio: 1;
     }
     .teacher2 {
@@ -133,13 +214,13 @@
     }
     .teacher3 {
         top: 35%;
-        left: 35%;
+        left: 30%;
         height: 55px;
         aspect-ratio: 1;
     }
     .teacher4 {
         top: 85%;
-        left: 30%;
+        left: 25%;
         height: 55px;
         aspect-ratio: 1;
     }
@@ -152,26 +233,26 @@
     }
     .teacher1 {
         top: 22%;
-        left: 97%;
-        height: 45px;
+        left: 87%;
+        height: 40px;
         aspect-ratio: 1;
     }
     .teacher2 {
-        top: 14%;
+        top: 5%;
         left: 55%;
-        height: 45px;
+        height: 40px;
         aspect-ratio: 1;
     }
     .teacher3 {
         top: 30%;
         left: 25%;
-        height: 45px;
+        height: 40px;
         aspect-ratio: 1;
     }
     .teacher4 {
-        top: 75%;
+        top: 70%;
         left: 22%;
-        height: 45px;
+        height: 40px;
         aspect-ratio: 1;
     }
     .web-heading {
@@ -179,11 +260,39 @@
         line-height: 28px;
     }
 }
+
+.we-are-offering {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 2.0s ease-in-out;
+  }
+  
+.we-are-offering.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 .offering_card {
     border: 1px solid #F1F1F1;
     border-radius: 10px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
-    // padding: 2vw;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.5s;
+}
+.offering_card:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2); /* Hover box shadow */
+    transform: scale(1.05); /* Scale up slightly on hover */
 }
 .offering_icon {
     background-color: #edebfd;
