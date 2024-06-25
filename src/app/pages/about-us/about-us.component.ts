@@ -1,31 +1,77 @@
-import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Renderer2,
+  inject,
+} from '@angular/core';
 import { ServiceOfferingCardComponent } from '../../components/app-shell/components/service-offering-card/service-offering-card.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ExplorePopupComponent } from '../../components/app-shell/components/explore-popup/explore-popup.component';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
   imports: [ServiceOfferingCardComponent],
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss']
+  styleUrls: ['./about-us.component.scss'],
 })
 export class AboutUsComponent implements AfterViewInit {
+  #dialog = inject(MatDialog);
+
   items = [
     { count: 200, label: 'Partners With Us' },
     { count: 120, label: 'Successful Projects' },
     { count: 20, label: 'No. of Course' },
-    { count: 200, label: 'Students' }
+    { count: 200, label: 'Students' },
   ];
 
   teamMembers = [
-    { name: 'Santhosh Kumar', role: 'Senior SAP Developer', imageUrl: 'assets/images/vst-developer-1.png' },
-    { name: 'Parasuraman', role: 'Senior SAP Developer', imageUrl: 'assets/images/vst-developer-2.png' },
-    { name: 'Dhamotharan', role: 'Senior SAP Developer', imageUrl: 'assets/images/vst-developer-3.png' },
-    { name: 'Kumaran', role: 'Senior SAP Developer', imageUrl: 'assets/images/vst-developer-4.png' },
-    { name: 'Sasidharan', role: 'Senior SAP Developer', imageUrl: 'assets/images/vst-developer-5.png' },
-    { name: 'Subash', role: 'Human Resource', imageUrl: 'assets/images/vst-developer-6.png' },
-    { name: 'Vengatakrishnan P', role: 'SAP Developer', imageUrl: 'assets/images/vst-developer-7.png' },
-    { name: 'Sasidharan', role: 'SAP Developer', imageUrl: 'assets/images/vst-developer-8.png' },
-    { name: 'Deepak Kumar', role: 'SAP Developer', imageUrl: 'assets/images/vst-developer-9.png' }
+    {
+      name: 'Santhosh Kumar',
+      role: 'Senior SAP Developer',
+      imageUrl: 'assets/images/vst-developer-1.png',
+    },
+    {
+      name: 'Parasuraman',
+      role: 'Senior SAP Developer',
+      imageUrl: 'assets/images/vst-developer-2.png',
+    },
+    {
+      name: 'Dhamotharan',
+      role: 'Senior SAP Developer',
+      imageUrl: 'assets/images/vst-developer-3.png',
+    },
+    {
+      name: 'Kumaran',
+      role: 'Senior SAP Developer',
+      imageUrl: 'assets/images/vst-developer-4.png',
+    },
+    {
+      name: 'Sasidharan',
+      role: 'Senior SAP Developer',
+      imageUrl: 'assets/images/vst-developer-5.png',
+    },
+    {
+      name: 'Subash',
+      role: 'Human Resource',
+      imageUrl: 'assets/images/vst-developer-6.png',
+    },
+    {
+      name: 'Vengatakrishnan P',
+      role: 'SAP Developer',
+      imageUrl: 'assets/images/vst-developer-7.png',
+    },
+    {
+      name: 'Sasidharan',
+      role: 'SAP Developer',
+      imageUrl: 'assets/images/vst-developer-8.png',
+    },
+    {
+      name: 'Deepak Kumar',
+      role: 'SAP Developer',
+      imageUrl: 'assets/images/vst-developer-9.png',
+    },
   ];
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -54,5 +100,12 @@ export class AboutUsComponent implements AfterViewInit {
     };
 
     updateCount();
+  }
+
+  openExplorePopup() {
+    this.#dialog.open(ExplorePopupComponent, {
+      panelClass: 'explore-popup',
+      disableClose: true,
+    });
   }
 }

@@ -1,12 +1,12 @@
 .web-heading {
-font-size: var(--web-font-size-h1);
-font-weight: var(--web-font-weight-semibold);
-line-height: var(--web-h1-line-height);
+  font-size: var(--web-font-size-h1);
+  font-weight: var(--web-font-weight-semibold);
+  line-height: var(--web-h1-line-height);
 }
 .web-subheading {
-    font-size: var(--web-font-size-h2);
-    font-weight: var(--web-font-weight-semibold);
-    line-height: var(--web-h2-line-height);
+  font-size: var(--web-font-size-h2);
+  font-weight: var(--web-font-weight-semibold);
+  line-height: var(--web-h2-line-height);
 }
 
 .button {
@@ -31,10 +31,10 @@ line-height: var(--web-h1-line-height);
   color: var(--web-secondary-color);
 }
 .para-info {
-    // font-size: var(--web-font-size-card-para);
-    color: var(--web-para-color);
-    font-weight: var(--web-font-weight-normal);
-    // line-height: var(--web-para-line-height);
+  // font-size: var(--web-font-size-card-para);
+  color: var(--web-para-color);
+  font-weight: var(--web-font-weight-normal);
+  // line-height: var(--web-para-line-height);
 }
 
 .web-card-bg {
@@ -75,6 +75,11 @@ line-height: var(--web-h1-line-height);
   cursor: pointer;
 }
 
+.explore-popup {
+  width: 30vw !important;
+  height: 100vh !important;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
   html {
@@ -113,5 +118,10 @@ line-height: var(--web-h1-line-height);
     --web-font-size-para: 14px;
     --web-font-size-card-para: 14px;
     --web-font-size-h3: 16px;
+  }
+
+  .explore-popup {
+    width: 100vw !important;
+    height: 100vh !important;
   }
 }
