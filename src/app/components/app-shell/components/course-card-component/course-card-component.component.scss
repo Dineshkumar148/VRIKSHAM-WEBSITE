@@ -19,9 +19,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .course-icon-container {
@@ -52,8 +49,8 @@
   
   @media (max-width: 576px) {
     .course-icon-container {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         border: 1px solid #E2E2E2;
     }
     

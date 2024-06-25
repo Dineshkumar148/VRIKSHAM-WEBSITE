@@ -8,11 +8,12 @@ import {
 import { ServiceOfferingCardComponent } from '../../components/app-shell/components/service-offering-card/service-offering-card.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ExplorePopupComponent } from '../../components/app-shell/components/explore-popup/explore-popup.component';
+import { TopHeaderSectionComponent } from '../../top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [ServiceOfferingCardComponent],
+  imports: [TopHeaderSectionComponent, ServiceOfferingCardComponent],
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
 })
