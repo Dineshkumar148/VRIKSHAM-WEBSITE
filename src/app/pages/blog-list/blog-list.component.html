@@ -25,9 +25,9 @@ paragraph="This blog post template can be customized further with specific detai
                             <h5 class="mb-0">{{blog.date}}</h5>
                             <p class="mb-0">{{blog.month}}</p>
                         </div>
-                        <img [src]="blog.blogCoverImage" class="w-100 z-0" [alt]="blog.altText">
-                        <h5 class="card-title pt-3">{{ blog.title | slice:0:30}}...</h5>
-                        <p class="card-text">{{ blog.content | slice:0:100 }}...</p>
+                        <img [src]="blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="blog.altText">
+                        <h5 class="card-title pt-3">{{ blog.title}}</h5>
+                        <p class="card-text">{{ blog.content | slice:0:75 }}...</p>
                         <a [routerLink]="['/post', blog.id]" class="text-decoration-none nav-active fw-medium">Read
                             More</a>
                     </div>

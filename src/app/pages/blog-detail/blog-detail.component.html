@@ -1,21 +1,69 @@
 <div class="container-fluid">
-<!-- header section component -->
-<div class="row web-card-bg px-3 px-md-5">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li><a routerLink="/home" class="text-secondary text-decoration-none">Home
-                </a> <span class="text-secondary ps-3">></span></li>
-            <li><a routerLink="/blog" class="text-secondary text-decoration-none ps-3">Blog</a> <span
-                    class="text-secondary ps-3">></span></li>
-            <li class="ps-3 nav-active fw-medium">Blog Details</li>
-        </ol>
-    </nav>
- </div>
+    <!-- header section component -->
+    <div class="row web-card-bg px-3 px-md-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li><a routerLink="/home" class="text-secondary text-decoration-none">Home
+                    </a> <span class="text-secondary ps-3">></span></li>
+                <li><a routerLink="/blog" class="text-secondary text-decoration-none ps-3">Blog</a> <span
+                        class="text-secondary ps-3">></span></li>
+                <li class="ps-3 nav-active fw-medium">Blog Details</li>
+            </ol>
+        </nav>
+    </div>
 </div>
 <app-top-header-section [heading]=" blog.title" [paragraph]="blog.content">
-  
+
 </app-top-header-section>
+
+
 <div class="container-fluid px-3 px-md-5">
+    <div class="p-3 p-md-5">
+        <div class="pb-3">
+            <img [src]="blog.blogCoverImage" class="w-100  rounded-4" [alt]="blog.altText">
+            <p class="para-info py-3">{{blog.blogTopPara1}}</p>
+            @if (blog.blogTopPara2) {
+            <p class="para-info pb-3">{{blog.blogTopPara2}}</p>
+            }
+        </div>
+        <div class="pb-3">
+            @if (blog.subHeading1) {
+                <h2 class="web-subheading">{{blog.subHeading1}}</h2>
+            }
+            @if (blog.subHeading1para1) {
+            <p class="para-info pb-3">{{blog.subHeading1para1}}</p>
+            }
+            @if (blog.subHeading1para2) {
+            <p class="para-info pb-3">{{blog.subHeading1para2}}</p>
+            }
+            @if (blog.subHeading1para3) {
+            <p class="para-info pb-3">{{blog.subHeading1para3}}</p>
+            }
+        </div>
+        <div class="pb-3">
+            <h2 class="web-subheading">{{blog.contentsubheading}}</h2>
+            <p class="para-info pb-3">{{blog.contentPara}}</p>
+            <img [src]="blog.blogContentImage" class="w-100 z-0  rounded-3" [alt]="blog.blogContentImageAltText">
+        </div>
+        <div class="py-3">
+            <h2 class="web-subheading pb-3">{{blog.blogPointsHeading}}</h2>
+            <ul>
+                <li class="pb-3">{{blog.blogPoint1}}</li>
+                <li class="pb-3">{{blog.blogPoint2}}</li>
+                <li class="pb-3">{{blog.blogPoint3}}</li>
+                <li class="pb-3">{{blog.blogPoint4}}</li>
+                @if (blog.blogPoint5) {
+                <li class="pb-3">{{blog.blogPoint5}}</li>
+                }
+
+            </ul>
+        </div>
+        <div class="pb-3">
+            <h2 class="web-subheading pb-3">{{blog.footerSubHeading}}</h2>
+            <p class="para-info pb-3">{{blog.footerpara}}</p>
+        </div>
+    </div>
+
     @if (otherBlogs.length > 0) {
     <div class="py-5">
         <h2 class="text-center">Latest Blogs & Posts</h2>
@@ -31,9 +79,9 @@
                                         <h5 class="mb-0">{{otherBlog.date}}</h5>
                                         <p class="mb-0">{{otherBlog.month}}</p>
                                     </div>
-                                    <img [src]="otherBlog.blogCoverImage" class="w-100 z-0" [alt]="blog.altText">
-                                    <h5 class="card-title pt-3">{{ otherBlog.title | slice:0:25 }}...</h5>
-                                    <p class="card-text">{{ otherBlog.content | slice:0:100 }}...</p>
+                                    <img [src]="otherBlog.blogCoverImage" class="w-100 z-0 image-fluid rounded-4" [alt]="blog.altText">
+                                    <h5 class="card-title pt-3">{{ otherBlog.title}}</h5>
+                                    <p class="card-text">{{ otherBlog.content | slice:0:60 }}...</p>
                                     <a [routerLink]="['/post', otherBlog.id]"
                                         class="text-decoration-none nav-active fw-medium">Read More</a>
                                 </div>
@@ -52,9 +100,9 @@
                                         <h5 class="mb-0">{{otherBlog.date}}</h5>
                                         <p class="mb-0">{{otherBlog.month}}</p>
                                     </div>
-                                    <img [src]="otherBlog.blogCoverImage" class="w-100 z-0" [alt]="blog.altText">
-                                    <h5 class="card-title pt-3">{{ otherBlog.title | slice:0:25 }}...</h5>
-                                    <p class="card-text">{{ otherBlog.content | slice:0:100 }}...</p>
+                                    <img [src]="otherBlog.blogCoverImage" class="w-100 z-0 image-fluid rounded-4" [alt]="blog.altText">
+                                    <h5 class="card-title pt-3">{{ otherBlog.title}}</h5>
+                                    <p class="card-text">{{ otherBlog.content | slice:0:60 }}...</p>
                                     <a [routerLink]="['/post', otherBlog.id]"
                                         class="text-decoration-none nav-active fw-medium">Read More</a>
                                 </div>
@@ -89,22 +137,23 @@
             <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @for (otherBlog of otherBlogs; track $index) {
-                        <div class="carousel-item @if ($index == 0) active @endif">
-                            <div class="col-md-4 mb-4">
-                                <div class="card border-0 rounded-5 p-2">
-                                    <div class="card-body">
-                                        <div class="calender-container bg-white px-3 rounded-bottom-3 text-center">
-                                            <h5 class="mb-0">{{otherBlog.date}}</h5>
-                                            <p class="mb-0">{{otherBlog.month}}</p>
-                                        </div>
-                                        <img [src]="otherBlog.blogCoverImage" class="w-100 z-0" [alt]="blog.altText">
-                                        <h5 class="card-title pt-3">{{ otherBlog.title | slice:0:30 }}...</h5>
-                                        <p class="card-text">{{ otherBlog.content | slice:0:100 }}...</p>
-                                        <a [routerLink]="['/post', otherBlog.id]" class="text-decoration-none nav-active fw-medium">Read More</a>
+                    <div class="carousel-item @if ($index == 0) active @endif">
+                        <div class="col-md-4 mb-4">
+                            <div class="card border-0 rounded-5 p-2">
+                                <div class="card-body">
+                                    <div class="calender-container bg-white px-3 rounded-bottom-3 text-center">
+                                        <h5 class="mb-0">{{otherBlog.date}}</h5>
+                                        <p class="mb-0">{{otherBlog.month}}</p>
                                     </div>
+                                    <img [src]="otherBlog.blogCoverImage" class="w-100 z-0 image-fluid rounded-4" [alt]="blog.altText">
+                                    <h5 class="card-title pt-3">{{ otherBlog.title}}</h5>
+                                    <p class="card-text">{{ otherBlog.content | slice:0:60 }}...</p>
+                                    <a [routerLink]="['/post', otherBlog.id]"
+                                        class="text-decoration-none nav-active fw-medium">Read More</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     }
                 </div>
                 <a class="carousel-control-prev" href="#blogCarousel" role="button" data-bs-slide="prev">
@@ -119,5 +168,5 @@
         </div>
     </div>
     }
-    
+
 </div>

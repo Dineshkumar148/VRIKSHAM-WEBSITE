@@ -119,4 +119,10 @@
     width: 100vw !important;
     height: 100vh !important;
   }
+
+  .web-subheading {
+    font-size: var(--web-font-size-h2);
+    font-weight: var(--web-font-weight-medium);
+    line-height: 35px;
+  }
 }

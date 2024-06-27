@@ -13,9 +13,9 @@
                                         <h5 class="mb-0">{{Blog.date}}</h5>
                                         <p class="mb-0">{{Blog.month}}</p>
                                     </div>
-                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0" [alt]="Blog.altText">
-                                    <h5 class="card-title pt-3">{{ Blog.title | slice:0:25 }}...</h5>
-                                    <p class="card-text">{{ Blog.content | slice:0:100 }}...</p>
+                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                    <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                    <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
                                     <a [routerLink]="['/post', Blog.id]"
                                         class="text-decoration-none nav-active fw-medium">Read More</a>
                                 </div>
@@ -34,9 +34,9 @@
                                         <h5 class="mb-0">{{Blog.date}}</h5>
                                         <p class="mb-0">{{Blog.month}}</p>
                                     </div>
-                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0" [alt]="Blog.altText">
-                                    <h5 class="card-title pt-3">{{ Blog.title | slice:0:25 }}...</h5>
-                                    <p class="card-text">{{ Blog.content | slice:0:100 }}...</p>
+                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                    <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                    <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
                                     <a [routerLink]="['/post', Blog.id]"
                                         class="text-decoration-none nav-active fw-medium">Read More</a>
                                 </div>
@@ -77,9 +77,9 @@
                                             <h5 class="mb-0">{{Blog.date}}</h5>
                                             <p class="mb-0">{{Blog.month}}</p>
                                         </div>
-                                        <img [src]="Blog.blogCoverImage" class="w-100 z-0" [alt]="Blog.altText">
-                                        <h5 class="card-title pt-3">{{ Blog.title | slice:0:30 }}...</h5>
-                                        <p class="card-text">{{ Blog.content | slice:0:100 }}...</p>
+                                        <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                        <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                        <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
                                         <a [routerLink]="['/post', Blog.id]" class="text-decoration-none nav-active fw-medium">Read More</a>
                                     </div>
                                 </div>
