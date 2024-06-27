@@ -9,39 +9,20 @@
     </div>
 </div>
 
+
 <div class="container">
     <div class="row g-4">
+        @for (offer of offerings; track $index) {
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="rounded-4  service-card p-4">
                 <div class="box-icon rounded-3 mb-3">
-                    <i class="bi bi-box-seam fs-2 d-flex justify-content-center pt-3 "></i>
+                    <i [class]="offer.icon + ' fs-2 d-flex justify-content-center pt-3 '"></i>
                 </div>
-                <h4 class="mb-3">Choose packages</h4>
-                <p class="mb-3">We offer a variety of packages to suit different business requirements and professional
-                    goals.</p>
+                <h4 class="mb-3">{{ offer.title }}</h4>
+                <p class="mb-3">{{ offer.description }}</p>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="rounded-4  service-card p-4">
-                <div class="box-icon  rounded-3 mb-3">
-                    <i class="bi bi-calendar2-event fs-2 d-flex justify-content-center pt-3 "></i>
-                </div>
-                <h4 class="mb-3 ">Schedule appointment</h4>
-                <p class="mb-3 ">Whether you're interested in a consultation, need support, or want to discuss training
-                    options, we're here to help.</p>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="rounded-4  service-card p-4">
-                <div class="box-icon  rounded-3 mb-3">
-                    <i class="bi bi-graph-up-arrow fs-2 d-flex justify-content-center pt-3 "></i>
-                </div>
-                <h4 class="mb-3">Grow together</h4>
-                <p class="mb-3">We believe in the power of growth through collaboration and continuous learning.</p>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex justify-content-center mt-5 p-3">
-        <button type="button" class="btn button-primary py-2 px-5 mt-3 mb-5" role="button">Explore</button>
+        }
+
     </div>
 </div>
