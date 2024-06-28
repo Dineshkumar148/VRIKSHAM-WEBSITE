@@ -1,7 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CourseCardComponentComponent } from '../../../components/app-shell/components/course-card-component/course-card-component.component';
 import { TopHeaderSectionComponent } from '../../../top-header-section/top-header-section.component';
+import { TestimonialCardComponent } from '../../../components/app-shell/components/testimonial-card/testimonial-card.component';
+import { StudentsWorkingCompanyComponent } from '../../../components/app-shell/components/students-working-company/students-working-company.component';
 
 @Component({
   selector: 'app-sap-training',
@@ -11,6 +13,8 @@ import { TopHeaderSectionComponent } from '../../../top-header-section/top-heade
     RouterOutlet,
     TopHeaderSectionComponent,
     CourseCardComponentComponent,
+    TestimonialCardComponent,
+    StudentsWorkingCompanyComponent
   ],
   templateUrl: './sap-training.component.html',
   styleUrl: './sap-training.component.scss',

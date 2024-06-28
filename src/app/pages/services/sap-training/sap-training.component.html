@@ -1,31 +1,31 @@
 <div class="container-fluid">
   <!-- header section component -->
   <div class="row web-card-bg px-3 px-md-5">
-      <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-              <li><a routerLink="/services" class="text-secondary text-decoration-none">Services
-                  </a> <span class="text-secondary ps-3">></span></li>
-              <li class="ps-3 nav-active fw-medium">SAP Consulting</li>
-          </ol>
-      </nav>
-   </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li><a routerLink="/services" class="text-secondary text-decoration-none">Services
+          </a> <span class="text-secondary ps-3">></span></li>
+        <li class="ps-3 nav-active fw-medium">SAP Consulting</li>
+      </ol>
+    </nav>
   </div>
-  <app-top-header-section heading=" SAP Consulting" paragraph="At Your One-Stop Shop for SAP Solutions, our SAP
+</div>
+<app-top-header-section heading=" SAP Consulting" paragraph="At Your One-Stop Shop for SAP Solutions, our SAP
   consulting services are designed to help businesses optimize their SAP systems and achieve their
   strategic objectives. ">
-  </app-top-header-section>
+</app-top-header-section>
 <div class="container-fluid">
   <div class="container icon-card">
     <div class="row web-card-primary rounded-3 px-3 py-3 py-md-5">
-    @for (card of cardDetails; track $index) {
+      @for (card of cardDetails; track $index) {
       <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start">
         <img [src]="card.icon" alt="" class="web-card-icon">
         <div class="ps-3 mb-lg-0">
           <h3 class="web-card-heading mb-md-0">{{ card.heading }}</h3>
-          <p class="web-card-paragraph mb-md-0">{{ card.paragraph }}</p>
+          <p class="web-card-paragraph mb-lg-0">{{ card.paragraph }}</p>
         </div>
       </div>
-    }
+      }
     </div>
   </div>
   <div class="row">
@@ -85,10 +85,10 @@
     <app-course-card-component></app-course-card-component>
   </div>
 
-
-  <div class="row web-card-bg">
+  <div class="row web-card-bg py-5 d-flex flex-column align-items-center">
+    <h1 class="web-sub-heading text-center col-lg-5 pb-3">How does our Placement Assistance work?</h1>
     <div class="svg-container">
-      <svg viewBox="0 0 1300 1400" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1300 1400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
         <!-- Connected paths forming a circular shape -->
         <path d="M 650 200 A 450 450 0 0 1 1050 500" stroke="#24774A" fill="transparent" stroke-width="5">
           <animate attributeName="stroke-dasharray" from="0,900" to="900,0" dur="2s" fill="freeze"
@@ -115,71 +115,58 @@
             repeatCount="indefinite" />
         </path>
 
-        <!-- Circles with text -->
+        <!-- Smaller circles with text -->
         <circle cx="650" cy="250" r="150" fill="#24774A"></circle>
-        <foreignObject x="525" y="125" width="250" height="250">
+        <foreignObject x="530" y="165" width="250" height="250">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="text-white pt-5 pt-md-3 circle-step">Step 1</h5>
-            <h2 class="text-white  pt-3 pt-md-0 circle-head">Enroll</h2>
-            <p class="text-white text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="text-white pb-4 circle-step">Step 1</h5>
+            <h2 class="text-white circle-head">Enroll</h2>
           </div>
         </foreignObject>
 
         <circle cx="1050" cy="500" r="150" fill="white"></circle>
-        <foreignObject x="925" y="375" width="250" height="250">
+        <foreignObject x="930" y="425" width="250" height="250">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="pt-5 pt-md-3 circle-step">Step 2</h5>
-            <h2 class="pt-3 pt-md-0 circle-head">Complete</h2>
-            <p class="text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="pb-4 circle-step">Step 2</h5>
+            <h2 class="circle-head">Complete</h2>
           </div>
         </foreignObject>
 
         <circle cx="1050" cy="900" r="150" fill="white"></circle>
-        <foreignObject x="925" y="775" width="250" height="250">
+        <foreignObject x="930" y="825" width="250" height="350">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="pt-5 pt-md-3 circle-step">Step 3</h5>
-            <h2 class="pt-3 pt-md-0 circle-head">Projects</h2>
-            <p class="text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="pb-4 circle-step">Step 3</h5>
+            <h2 class="circle-head">Projects</h2>
           </div>
         </foreignObject>
 
-        <circle cx="660" cy="1200" r="150" fill="white"></circle>
-        <foreignObject x="535" y="1075" width="250" height="250">
+        <circle cx="650" cy="1200" r="150" fill="white"></circle>
+        <foreignObject x="530" y="1125" width="250" height="350">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="pt-5 pt-md-3 circle-step">Step 4</h5>
-            <h2 class="text-center pt-3 pt-md-0 circle-head">Mock Interviews</h2>
-            <p class="text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="circle-step pb-4">Step 4</h5>
+            <h2 class="text-center circle-head">Mock Interviews</h2>
           </div>
         </foreignObject>
 
         <circle cx="250" cy="900" r="150" fill="white"></circle>
-        <foreignObject x="125" y="775" width="250" height="250">
+        <foreignObject x="120" y="825" width="250" height="350">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="pt-5 pt-md-3 circle-step">Step 5</h5>
-            <h2 class="pt-3 pt-md-0 circle-head">Opportunities</h2>
-            <p class="text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="circle-step pb-4">Step 5</h5>
+            <h2 class="circle-head">Opportunities</h2>
           </div>
         </foreignObject>
 
         <circle cx="250" cy="500" r="150" fill="white"></circle>
-        <foreignObject x="125" y="375" width="250" height="250">
+        <foreignObject x="120" y="420" width="250" height="350">
           <div xmlns="http://www.w3.org/1999/xhtml"
             class="d-flex flex-column justify-content-center align-items-center">
-            <h5 class="pt-5 pt-md-3 circle-step">Step 6</h5>
-            <h2 class="pt-3 pt-md-0 circle-head">Guidance</h2>
-            <p class="text-center d-none d-sm-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed commodo purus sit amet nisl rutrum, eu ultricies risus hendrerit.</p>
+            <h5 class="circle-step pb-4">Step 6</h5>
+            <h2 class="circle-head">Guidance</h2>
           </div>
         </foreignObject>
 
@@ -358,4 +345,15 @@
 
   </div>
 
+
+  <app-students-working-company></app-students-working-company>
+
+
+  <!-- testimonial card -->
+  <div class="row py-3 py-md-5">
+    <h3 class="pb-3 web-sub-heading text-center">Hear from Our Satisfied Clients & Students</h3>
+    <p class="web-paragraph text-center">At Your One-Stop Shop for SAP Solutions, we take pride in the positive
+      feedback we receive from our clients and students.</p>
+    <app-testimonial-card></app-testimonial-card>
+  </div>
 </div>

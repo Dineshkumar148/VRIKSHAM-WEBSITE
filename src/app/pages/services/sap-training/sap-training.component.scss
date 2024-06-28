@@ -44,7 +44,7 @@
 
 .svg-container {
   max-width: 100%;
-  height: auto;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -54,10 +54,24 @@ svg {
 }
 
 .circle-step {
-font-size: 20px;
-font-weight: 500;
-line-height: 28px;
-color: #222222;
+  font-size: 2rem !important;
+  font-weight: 500;
+  line-height: 28px;
+  color: #222222;
+}
+
+.circle-head {
+  font-size: 2.5rem !important;
+  font-weight: 500;
+  line-height: 48px !important;
+  color: #222222;
+}
+
+.circle-step {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #222222;
 }
 
 .circle-head {
@@ -71,9 +85,6 @@ circle {
   transition: fill 0.3s;
 }
 
-circle:hover {
-  fill: lightgray;
-}
 
 /* Responsive styles */
 @media (max-width: 1200px) {
@@ -176,18 +187,9 @@ circle:hover {
     display: none;
   }
 
-  .circle-step {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 28px;
-    color: #222222;
-    }
-    
-    .circle-head {
-      font-size: 40px;
-      font-weight: 500;
-      line-height: 58px;
-      color: #222222;
-    }
-    
+  .svg-container {
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
 }
