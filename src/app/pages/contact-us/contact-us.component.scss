@@ -1,14 +1,142 @@
 * {
-    font-family: "Poppins";
-  }
-.contact-section{
+  font-family: "Poppins";
+}
+.contact-section {
   background-color: #f9fafb;
-
 }
-.bi-geo-alt-fill, .bi-envelope-fill, .bi-telephone-fill{
+.bi-geo-alt-fill,
+.bi-envelope-fill,
+.bi-telephone-fill {
   color: #24774a;
- 
 }
-.contact-form-bg{
-    background-color: #24774A;
+.contact-form-bg {
+  background-color: #24774a;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-out;
+}
+
+.web-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.web-heading::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  // background-color: #24774a;
+  transition: all 0.5s ease-out;
+}
+
+.web-heading:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+.animate-pop {
+  animation: pop 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+
+/* Add a staggered delay to form fields */
+.animate-pop:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animate-pop:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.animate-pop:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.animate-pop:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.animate-pop:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Add hover effect to form fields */
+.form-control {
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Add hover effect to submit button */
+.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
