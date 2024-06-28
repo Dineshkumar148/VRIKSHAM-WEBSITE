@@ -12,14 +12,14 @@ import { AfterViewInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit(): void {
     const weAreOffering = this.elementRef.nativeElement.querySelector('.we-are-offering');
     const coursesCount = this.elementRef.nativeElement.querySelector('#courses-count') as HTMLElement;
     const studentsCount = this.elementRef.nativeElement.querySelector('#students-count') as HTMLElement;
-
+    
     window.addEventListener('scroll', () => {
       const scrollPosition = window.scrollY;
       const elementPosition = weAreOffering.offsetTop;
