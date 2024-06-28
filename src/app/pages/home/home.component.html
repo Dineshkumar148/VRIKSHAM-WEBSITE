@@ -33,21 +33,29 @@
 </div>
 
 <!--  We Are Offering section -->
-<div class="d-flex pt-0 pt-md-2 pt-lg-5">
-    <div class="col-1 col-md-1 col-lg-4"></div>
-    <div class="col-10 col-md-10 col-lg-4">
-        <h2 class="h1 fw-600 text-center pt-3 pt-md-3 pt-lg-0 we-are-offering"> We Are Offering </h2>
+<div class="position-relative">
+    <div class="d-flex pt-0 pt-md-2 pt-lg-5">
+        <div class="col-1 col-md-1 col-lg-4"></div>
+        <div class="col-10 col-md-10 col-lg-4">
+            <h2 class="h1 fw-600 text-center pt-3 pt-md-3 pt-lg-0 we-are-offering">We Are Offering </h2>
+        </div>
+        <div class="col-1 col-md-1 col-lg-4"></div>
     </div>
-    <div class="col-1 col-md-1 col-lg-4"></div>
-</div>
-<div class="d-flex">
-    <div class="col-0 col-md-1 col-lg-4"></div>
-    <div class="col-12 col-md-10 col-lg-4">
-        <p class="text-center h6 para-info lh-base">In the realm of career advancement, we are offering opportunities
-            that pave the path to your professional growth.</p>
+    <div class="d-flex">
+        <div class="col-0 col-md-1 col-lg-4"></div>
+        <div class="col-12 col-md-10 col-lg-4">
+            <p class="text-center h6 para-info lh-base">In the realm of career advancement, we are offering opportunities
+                that pave the path to your professional growth.</p>
+        </div>
+        <div class="col-0 col-md-1 col-lg-4"></div>
+        <div class="circle position-absolute"></div>
+        <div class="circle1 position-absolute"></div>
+        <div class="star position-absolute">
+            <img class="star-img" src="./assets/images/StarFour.svg" alt="Star">
+        </div>
     </div>
-    <div class="col-0 col-md-1 col-lg-4"></div>
 </div>
+
 <!-- cards -->
 <div class="d-flex pt-3 pb-4">
     <div class="col-1 col-md-1 col-lg-2"></div>
@@ -76,7 +84,7 @@
     </div>
     <div class="col-1 col-md-1 col-lg-2"></div>
 </div>
-<div class="d-flex pb-4">
+<div class="d-flex pb-4 position-relative">
     <div class="col-1 col-md-1 col-lg-2"></div>
     <div class="col-10 col-md-10 col-lg-8 d-md-flex d-lg-flex justify-content-center">
         <div class="col-12 col-md-6 col-lg-6 d-flex offering_card p-4 mb-3 mb-md-0 mb-lg-0">
@@ -101,18 +109,24 @@
         </div>
     </div>
     <div class="col-1 col-md-1 col-lg-2"></div>
+    <div class="sparkle position-absolute">
+        <img class="sparkle-img" src="./assets/images/Sparkle.svg" alt="Sparkle">
+    </div>
 </div>
 
 <!-- aboutUs -->
 <div class="bg-sec d-flex p-2 p-md-4 p-lg-5">
     <div class="col-0 col-md-0 col-lg-1"></div>
-    <div class="col-12 col-md-10 col-lg-10 d-md-flex d-lg-flex pt-0 pt-md-0 pt-lg-3">
-        <div class="col-12 col-md-6 col-lg-5">
-            <img class="img-fluid h-100" src="./assets/images/main_aboutus.png" alt="aboutus">
+    <div class="col-12 col-md-10 col-lg-10 pt-0 pt-md-0 pt-lg-3 d-flex flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 col-lg-5 d-none d-sm-block p-3 p-md-0 p-lg-0 pt-3 pt-md-5 pt-lg-0">
+            <img class="img-fluid" src="./assets/images/main_aboutus.png" alt="aboutus">
         </div>
-        <div class="col-12 col-md-8 col-lg-7 ps-0 ps-md-2 ps-lg-5 pt-4 pt-md-3 pt-lg-5">
+        <div class="col-12 col-md-8 col-lg-7 aboutUs-l1 ps-0 ps-md-2 ps-lg-5 pt-4 pt-md-3 pt-lg-5">
             <h5 class="h6 web-secondary ps-2 ps-md-4 ps-lg-5">About Us</h5>
             <h2 class="h1 fw-600 ps-2 ps-md-4 ps-lg-5 pt-2"> Guideline for your financial & Career grow. </h2>
+            <div class="d-sm-none d-lg-none col-12 p-3 pt-3">
+                <img class="img-fluid" src="./assets/images/main_aboutus.png" alt="aboutus">
+            </div>
             <h5 class="h6 ps-2 ps-md-4 ps-lg-5 lh-lg fw-normal">At VRIKSHAM SOFT TECH, our mission is to leverage our
                 extensive software programming and domain expertise to deliver cutting-edge IT solutions to our clients.
                 We are committed to fostering strong partnerships, providing exceptional customer service, and driving
@@ -125,11 +139,11 @@
             </div>
             <div class="d-flex justify-content-between px-5">
                 <div class="ps-0 ps-lg-5">
-                    <h2 class="h1 ps-0 ps-lg-5">20+</h2>
+                    <h2 class="h1 ps-0 ps-lg-5" id="courses-count">0</h2>
                     <h6 class="para-info ps-0 ps-lg-5">Courses</h6>
                 </div>
                 <div class="ps-0 pe-lg-5">
-                    <h2 class="h1">1200+</h2>
+                    <h2 class="h1" id="students-count">0</h2>
                     <h6 class="para-info">Students</h6>
                 </div>
             </div>
@@ -137,6 +151,7 @@
     </div>
     <div class="col-0 col-md-0 col-lg-1"></div>
 </div>
+
 
 <!-- Our Achievement -->
 <div class="d-flex pt-4 pt-md-5 pt-lg-5">
