@@ -13,22 +13,6 @@
   color: #f7776d;
 }
 
-.icon-wrapper {
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.icon-wrapper:hover .icon {
-  transform: scale(1.2);
-  color: #007bff;
-}
-
-.icon-wrapper:hover h5,
-.icon-wrapper:hover p {
-  color: #007bff;
-}
-
 .career-bg-image {
   background-image: url("/assets/images/Job openings-carrer-bg.svg");
   background-size: cover;
@@ -51,6 +35,7 @@
   opacity: 70%;
 }
 
+// media-quiries
 @media (max-width: 992px) {
   .icon-wrapper {
     flex-direction: row;
@@ -66,5 +51,161 @@
 
   .icon-wrapper .icon {
     margin-bottom: 0.5rem;
+  }
+}
+
+// heading and sub heading animation
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-out;
+}
+
+.web-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.web-heading::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  transition: all 0.5s ease-out;
+}
+
+.web-heading:hover::after {
+  width: 100%;
+  left: 0;
+}
+.job-icon {
+  color: #5c606c;
+}
+
+
+/* Icon base styles and hover effect */
+.col-lg-4 .icon i.bi,
+.col-sm-12 .icon i.bi {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.col-lg-4 .icon:hover i.bi,
+.col-sm-12 .icon:hover i.bi {
+  transform: scale(1.2);
+}
+
+/* Specific icon animations */
+.col-lg-4 .icon i.bi-graph-up-arrow,
+.col-sm-12 .icon i.bi-graph-up-arrow {
+  animation: bounce 2s infinite;
+}
+
+.col-lg-4 .icon i.bi-currency-rupee,
+.col-sm-12 .icon i.bi-currency-rupee {
+  animation: bounce 3s infinite linear;
+}
+
+.col-lg-4 .icon i.bi-person,
+.col-sm-12 .icon i.bi-person {
+  animation: pulse 2s infinite;
+}
+
+.col-lg-4 .icon i.bi-clock,
+.col-sm-12 .icon i.bi-clock {
+  animation: swing 2s infinite;
+}
+
+.col-lg-4 .icon i.bi-window-plus,
+.col-sm-12 .icon i.bi-window-plus {
+  animation: fadeInOut 2s infinite;
+}
+
+.col-lg-4 .icon i.bi-globe-americas,
+.col-sm-12 .icon i.bi-globe-americas {
+  animation: spin 10s infinite linear;
+}
+
+/* Keyframe animations remain the same */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

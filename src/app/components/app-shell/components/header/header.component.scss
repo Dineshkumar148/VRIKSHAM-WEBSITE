@@ -13,32 +13,32 @@
 .navbar-nav .nav-link {
   color: #000;
   transition: color 0.3s;
+  position: relative;
 }
-
-.navbar-nav .nav-link:hover {
-  color: #24774a;
-}
-.navbar-nav .active-link {
-  color: #24774a;
-}
-
 
 .navbar-nav .nav-link::after {
   content: "";
+  display: block;
   width: 0;
   height: 2px;
-  color:#24774a;
+  background-color: #24774a;
   transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust this value as needed */
 }
 
 .navbar-nav .nav-link:hover::after {
-  width: 0%;
+  width: 100%;
 }
 
 .navbar-nav .active-link {
   color: #24774a;
 }
 
+.navbar-nav .active-link::after {
+  width: 100%;
+}
 
 /* Style for Get Start Button */
 .get-started-button {
@@ -54,11 +54,11 @@
   cursor: pointer;
 }
 
-
 /* Horizontal Services Dropdown */
 .services-menu {
   width: auto;
-  left:-200px;
+  left: -200px;
+  top: 50px;
 }
 
 .services-menu .d-flex {
@@ -69,38 +69,61 @@
 .services-menu .dropdown-item {
   width: auto;
   white-space: nowrap;
- 
 }
 
 .services-menu .dropdown-item:last-child {
   border-right: none;
 }
 
-.services-menu .dropdown-item:hover {
-  background-color: #f8f9fa;
-  color: #24774a;
-}
-
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .services-menu {
-      min-width: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    position: absolute;
   }
-  
+
   .services-menu .d-flex {
-      flex-direction: column;
+    flex-direction: column;
   }
-  
+
   .services-menu .dropdown-item {
-      border-right: none;
-      border-bottom: 1px solid #e9ecef;
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+    width: 100%;
+    text-align: left;
   }
-  
+
   .services-menu .dropdown-item:last-child {
-      border-bottom: none;
+    border-bottom: none;
   }
 }
 
+.dropdown-toggle-btn {
+  background: none;
+  border: none;
+  color: #000;
+  padding: 0;
+  margin-left: 5px;
+}
 
+.nav-item.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
+.dropdown-menu.show {
+  display: block;
+}
 
+.services-menu .dropdown-item i {
+  margin-right: 8px;
+}
+
+.services-menu .dropdown-item:hover {
+  background-color: #24774a;
+  color: #fff;
+  border-radius: 20px;
+}

@@ -4,7 +4,10 @@
             <img src="./assets/images/logo.svg" alt="Logo" class="img-fluid">
         </a>
         <div class="d-flex order-lg-last">
-            <button class="btn btn-success me-2 d-lg-none" type="button">Get Start</button>
+            <a routerLink="contact-us">
+                <button class="btn btn-success me-2 d-lg-none" type="button">Get Start</button>
+            </a>
+          
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -15,20 +18,23 @@
                     <a class="nav-link" routerLink="home" routerLinkActive="active-link">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false" routerLink="services" routerLinkActive="active-link">
+                    <a class="nav-link" id="navbarDropdown" role="button" routerLink="services" routerLinkActive="active-link">
                         Services
                     </a>
-                    <div class="dropdown-menu services-menu rounded-5" aria-labelledby="navbarDropdown">
-                        <div class="d-flex">
-                            <a class="dropdown-item" href="#"><i class="bi bi-headset"></i> SAP Consulting</a>
+                    <button class="dropdown-toggle-btn" (click)="toggleDropdown($event)">
+                        <i class="bi" [ngClass]="{'bi-chevron-down': !isDropdownOpen, 'bi-chevron-up': isDropdownOpen}"></i>
+                    </button>
+                    <div class="dropdown-menu services-menu rounded-5" [ngClass]="{'show': isDropdownOpen}" aria-labelledby="navbarDropdown">
+                        <div class="d-flex flex-wrap flex-lg-nowrap">
+                            <a class="dropdown-item ms-2" href="#"><i class="bi bi-headset"></i> SAP Consulting</a>
                             <a class="dropdown-item" href="#"><i class="bi bi-database"></i> Application Management</a>
                             <a class="dropdown-item" href="#"><i class="bi bi-stopwatch"></i> Rollouts & Upgrade</a>
                             <a class="dropdown-item" href="#"><i class="bi bi-columns"></i> UI/UX Design</a>
-                            <a class="dropdown-item" href="#"><i class="bi bi-code-square"></i> Development</a>
+                            <a class="dropdown-item me-2" href="#"><i class="bi bi-code-square"></i> Development</a>
                         </div>
                     </div>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" routerLink="training" routerLinkActive="active-link">Training</a>
                 </li>
@@ -43,10 +49,11 @@
                 </li>
             </ul>
             <div class="d-none d-lg-flex me-3">
-                <!-- <button class="btn btn-outline-secondary me-2" type="button">Sign In</button>
-          <button class="btn btn-success" type="button">Get Start</button> -->
                 <button type="button" class="btn btn-link text-decoration-none text-dark me-2">Sign In</button>
-                <button type="button" class="btn get-started-button" role="button">Get Start</button>
+                <a routerLink="contact-us">
+                    <button type="button" class="btn get-started-button" role="button">Get Start</button>
+                </a>
+               
             </div>
         </div>
     </div>
