@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ServicesWorksCardComponent } from '../../components/app-shell/components/services-works-card/services-works-card.component';
 import { TestimonialCardComponent } from '../../components/app-shell/components/testimonial-card/testimonial-card.component';
-import { TopHeaderSectionComponent } from '../../top-header-section/top-header-section.component';
+import { TopHeaderSectionComponent } from '../../components/app-shell/components/top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-training',

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CourseCardComponentComponent } from '../../../components/app-shell/components/course-card-component/course-card-component.component';
-import { TopHeaderSectionComponent } from '../../../top-header-section/top-header-section.component';
+import { TopHeaderSectionComponent } from '../../../components/app-shell/components/top-header-section/top-header-section.component';
 import { TestimonialCardComponent } from '../../../components/app-shell/components/testimonial-card/testimonial-card.component';
 import { StudentsWorkingCompanyComponent } from '../../../components/app-shell/components/students-working-company/students-working-company.component';
 

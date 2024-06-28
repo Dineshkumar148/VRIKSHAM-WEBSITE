@@ -3,7 +3,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BlogService } from '../blog.service';
 import { CommonModule, SlicePipe } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { TopHeaderSectionComponent } from '../../top-header-section/top-header-section.component';
+import { TopHeaderSectionComponent } from '../../components/app-shell/components/top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-blog-detail',

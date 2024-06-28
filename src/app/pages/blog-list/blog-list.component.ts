@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { RouterModule } from '@angular/router';
 import { SlicePipe } from '@angular/common';
-import { TopHeaderSectionComponent } from '../../top-header-section/top-header-section.component';
+import { TopHeaderSectionComponent } from '../../components/app-shell/components/top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-blog-list',
