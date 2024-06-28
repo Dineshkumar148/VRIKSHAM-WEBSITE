@@ -32,45 +32,56 @@ export const routes: Routes = [
         path: 'home',
         // loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)
         component: HomeComponent,
+        title: 'VrikshamSoft | Home',
       },
       {
         path: 'services',
         component: ServicesComponent,
+        title: 'VrikshamSoft | Services',
       },
       {
         path: 'sap-training',
         component: SapTrainingComponent,
+        title: 'VrikshamSoft | Sap-Training',
       },
       {
         path: 'career',
         component: CareerComponent,
+        title: 'VrikshamSoft | Career',
       },
       {
         path: 'training',
         component: TrainingComponent,
+        title: 'VrikshamSoft | Training',
       },
       {
         path: 'contact-us',
         component: ContactUsComponent,
+        title: 'VrikshamSoft | ContactUs',
       },
       {
         path: 'about-us',
         component: AboutUsComponent,
+        title: 'VrikshamSoft | AboutUs',
       },
       { path: 'career/full-stack-development', 
-        component: FullStackDevelopmentComponent
+        component: FullStackDevelopmentComponent,
+        title: 'VrikshamSoft | Career | Full Stack Development',
      },
      {
       path: 'privacy-policy',
       component: PrivacyPolicyComponent,
+      title: 'VrikshamSoft | Privacy Policy',
      },
       {
         path: 'blog',
-        component: BlogListComponent 
+        component: BlogListComponent,
+        title: 'VrikshamSoft | Blog',
       },
       { 
         path: 'post/:id', 
-        component: BlogDetailComponent 
+        component: BlogDetailComponent,
+        title: 'VrikshamSoft | Blog',
       },
     ],
   },
