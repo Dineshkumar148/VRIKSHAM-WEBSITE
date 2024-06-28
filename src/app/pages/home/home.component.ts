@@ -35,6 +35,41 @@ export class HomeComponent implements AfterViewInit {
 
     this.animateNumber(coursesCount, 0, 20, 2000); // Animate from 0 to 20 in 2 seconds
     this.animateNumber(studentsCount, 0, 1200, 2000); // Animate from 0 to 1200 in 2 seconds
+    this.initScrollAnimation();
+  }
+
+  initScrollAnimation() {
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+
+    const elementInView = (el: Element, percentageScroll = 100) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <= 
+        ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+      );
+    };
+
+    const displayScrollElement = (element: Element) => {
+      element.classList.add('show');
+    };
+
+    const hideScrollElement = (element: Element) => {
+      element.classList.remove('show');
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 70)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      })
+    }
+
+    window.addEventListener('scroll', () => {
+      handleScrollAnimation();
+    });
   }
 
   private animateNumber(
