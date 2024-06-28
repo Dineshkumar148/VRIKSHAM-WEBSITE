@@ -1,0 +1,281 @@
+.bg-sec {
+  background-color: #e1e5e9 !important;
+}
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.root_leaf {
+  height: 10vw;
+  aspect-ratio: 1;
+}
+
+.leaf1, .leaf11, .leaf2, .leaf10, .leaf3, .leaf9, .leaf4, .leaf8, .leaf5, .leaf7, .leaf6 {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+}
+
+.leaf1 {
+  top: 49.8%;
+  left: 53.9%;
+  height: 1.5vw;
+  aspect-ratio: 1;
+  animation: floatReverse 2s ease-in-out infinite;
+}
+
+.leaf11 {
+  top: 49.8%;
+  left: 44.9%;
+  height: 1.5vw;
+  aspect-ratio: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.leaf2 {
+  top: 46%;
+  left: 54.6%;
+  height: 2vw;
+  aspect-ratio: 1;
+  animation: floatReverse 3s ease-in-out infinite;
+}
+
+.leaf10 {
+  top: 46%;
+  left: 43.5%;
+  height: 2vw;
+  aspect-ratio: 1;
+  animation: floatReverse 4s ease-in-out infinite;
+}
+
+.leaf3 {
+  top: 41%;
+  left: 54.4%;
+  height: 2.5vw;
+  aspect-ratio: 1;
+  animation: floatReverse 5s ease-in-out infinite;
+}
+
+.leaf9 {
+  top: 41.2%;
+  left: 43.2%;
+  height: 2.5vw;
+  aspect-ratio: 1;
+  animation: floatReverse 2s ease-in-out infinite;
+}
+
+.leaf4 {
+  top: 35.8%;
+  left: 53.2%;
+  height: 3vw;
+  aspect-ratio: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.leaf8 {
+  top: 35.8%;
+  left: 43.8%;
+  height: 3vw;
+  aspect-ratio: 1;
+  animation: floatReverse 3s ease-in-out infinite;
+}
+
+.leaf5 {
+  top: 33%;
+  left: 50.5%;
+  height: 3vw;
+  aspect-ratio: 1;
+  animation: floatReverse 2s ease-in-out infinite;
+}
+
+.leaf7 {
+  top: 33%;
+  left: 46.7%;
+  height: 3vw;
+  aspect-ratio: 1;
+  animation: floatReverse 4s ease-in-out infinite;
+}
+
+.leaf6 {
+  top: 28.5%;
+  left: 48.4%;
+  height: 3.5vw;
+  aspect-ratio: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+      transform: translateY(0) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+// media Query
+@media (max-width: 821px) {
+  .root_leaf {
+    height: 30vw;
+    aspect-ratio: 1;
+  }
+  .leaf1 {
+    top: 49.8%;
+    left:62%;
+    height: 4vw;
+    aspect-ratio: 1;
+  }
+  .leaf11 {
+    top: 49.8%;
+    left: 35%;
+    height: 4vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf2 {
+    top: 46%;
+    left: 63.5%;
+    height: 6vw;
+    aspect-ratio: 1;
+  }
+  .leaf10 {
+    top: 46%;
+    left: 30.7%;
+    height: 6vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf3 {
+    top: 41.5%;
+    left: 62.7%;
+    height: 7vw;
+    aspect-ratio: 1;
+  }
+  .leaf9 {
+    top: 41.5%;
+    left: 30%;
+    height: 7vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf4 {
+    top: 36.7%;
+    left: 59.7%;
+    height: 8vw;
+    aspect-ratio: 1;
+  }
+  .leaf8 {
+    top: 36.7%;
+    left: 32.5%;
+    height: 8vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf5 {
+    top: 33.5%;
+    left: 50.5%;
+    height: 9vw;
+    aspect-ratio: 1;
+  }
+  .leaf7 {
+    top: 33.5%;
+    left: 40.5%;
+    height: 9vw;
+    aspect-ratio: 1;
+  }
+  .leaf6 {
+    top: 29%;
+    left: 45.3%;
+    height: 9vw;
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .root_leaf {
+    height: 40vw;
+    aspect-ratio: 1;
+  }
+  .leaf1 {
+    top: 53.5%;
+    left:66%;
+    height: 6vw;
+    aspect-ratio: 1;
+  }
+  .leaf11 {
+    top: 53.5%;
+    left: 29.5%;
+    height: 6vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf2 {
+    top: 50.3%;
+    left: 68%;
+    height: 8vw;
+    aspect-ratio: 1;
+  }
+  .leaf10 {
+    top: 50.3%;
+    left: 24.3%;
+    height: 8vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf3 {
+    top: 46%;
+    left: 66%;
+    height: 9vw;
+    aspect-ratio: 1;
+  }
+  .leaf9 {
+    top: 46%;
+    left: 25%;
+    height: 9vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf4 {
+    top: 41%;
+    left: 63%;
+    height: 10vw;
+    aspect-ratio: 1;
+  }
+  .leaf8 {
+    top: 41%;
+    left: 27.5%;
+    height: 10vw;
+    aspect-ratio: 1;
+  }
+
+  .leaf5 {
+    top: 39%;
+    left: 50.5%;
+    height: 11vw;
+    aspect-ratio: 1;
+  }
+  .leaf7 {
+    top: 39%;
+    left: 40.5%;
+    height: 11vw;
+    aspect-ratio: 1;
+  }
+  .leaf6 {
+    top: 35%;
+    left: 45.3%;
+    height: 11vw;
+    aspect-ratio: 1;
+  }
+}
