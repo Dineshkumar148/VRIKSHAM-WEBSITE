@@ -1,70 +1,81 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CourseCardComponentComponent } from '../../../components/app-shell/components/course-card-component/course-card-component.component';
+import { TopHeaderSectionComponent } from '../../../top-header-section/top-header-section.component';
 
 @Component({
   selector: 'app-sap-training',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, CourseCardComponentComponent],
+  imports: [
+    RouterLink,
+    RouterOutlet,
+    TopHeaderSectionComponent,
+    CourseCardComponentComponent,
+  ],
   templateUrl: './sap-training.component.html',
   styleUrl: './sap-training.component.scss',
 })
 export class SapTrainingComponent implements AfterViewInit {
-
   cardDetails = [
     {
       icon: 'assets/images/library_icon.svg',
       heading: 'Learning Format',
-      paragraph: 'Offline(Classroom)'
+      paragraph: 'Offline(Classroom)',
     },
     {
       icon: 'assets/images/duration-icon.svg',
       heading: 'Duration',
-      paragraph: '6 Months'
+      paragraph: '6 Months',
     },
     {
       icon: 'assets/images/placement-icon.svg',
       heading: 'Placements',
-      paragraph: '100%'
+      paragraph: '100%',
     },
     {
       icon: 'assets/images/emi-icon.svg',
       heading: 'No Cost EMI Starts',
-      paragraph: 'at ₹4999/month*'
-    }
+      paragraph: 'at ₹4999/month*',
+    },
   ];
 
   benefits = [
     {
       icon: 'assets/images/vriksham-classroom-format.svg',
       heading: 'Classroom Format',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       icon: 'assets/images/vriksham-real-time-projects.svg',
       heading: 'Work on real-life Industry Projects',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       icon: 'assets/images/vriksham-placement-assistance.svg',
       heading: 'Placement Assistance',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       icon: 'assets/images/vriksham-emi.svg',
       heading: 'EMI No Cost EMI',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       icon: 'assets/images/vriksham-live-class.svg',
       heading: 'Live online class test',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       icon: 'assets/images/vriksham-skill.svg',
       heading: 'Recognized skill certifications',
-      paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    }
+      paragraph:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    },
   ];
 
   ngAfterViewInit(): void {

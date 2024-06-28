@@ -1,0 +1,103 @@
+<div class="container-fluid px-3 px-md-5">
+    @if (blogs.length > 0) {
+    <div>
+        <div id="carouselExample" class="carousel slide p-5 d-none d-md-block" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        @for (Blog of blogs | slice:0:3; track $index) {
+                        <div class="col-md-4 mb-4">
+                            <div class="card border-0 rounded-5 p-2">
+                                <div class="card-body">
+                                    <div class="calender-container bg-white px-3 rounded-bottom-3 text-center">
+                                        <h5 class="mb-0">{{Blog.date}}</h5>
+                                        <p class="mb-0">{{Blog.month}}</p>
+                                    </div>
+                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                    <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                    <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
+                                    <a [routerLink]="['/post', Blog.id]"
+                                        class="text-decoration-none nav-active fw-medium">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        @for (Blog of blogs | slice:3:6; track $index) {
+                        <div class="col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="card border-0 rounded-5 p-2">
+                                <div class="card-body">
+                                    <div class="calender-container bg-white px-3 rounded-bottom-3 text-center">
+                                        <h5 class="mb-0">{{Blog.date}}</h5>
+                                        <p class="mb-0">{{Blog.month}}</p>
+                                    </div>
+                                    <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                    <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                    <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
+                                    <a [routerLink]="['/post', Blog.id]"
+                                        class="text-decoration-none nav-active fw-medium">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <!-- Add more indicators as needed -->
+            </div>
+        </div>
+
+        <!-- MObile device  -->
+        <div class="row d-md-none">
+            <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @for (Blog of blogs; track $index) {
+                        <div class="carousel-item @if ($index == 0) active @endif">
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-0 rounded-5 p-2">
+                                    <div class="card-body">
+                                        <div class="calender-container bg-white px-3 rounded-bottom-3 text-center">
+                                            <h5 class="mb-0">{{Blog.date}}</h5>
+                                            <p class="mb-0">{{Blog.month}}</p>
+                                        </div>
+                                        <img [src]="Blog.blogCoverImage" class="w-100 z-0 rounded-4" [alt]="Blog.altText">
+                                        <h5 class="card-title pt-3">{{ Blog.title}}</h5>
+                                        <p class="card-text">{{ Blog.content | slice:0:60 }}...</p>
+                                        <a [routerLink]="['/post', Blog.id]" class="text-decoration-none nav-active fw-medium">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#blogCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#blogCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    }
+    
+</div>
