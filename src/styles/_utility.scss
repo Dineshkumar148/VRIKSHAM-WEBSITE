@@ -1,7 +1,6 @@
 .web-heading {
   font-size: var(--web-font-size-h1);
   font-weight: var(--web-font-weight-semibold);
-  line-height: var(--web-h1-line-height);
 }
 .web-subheading {
   font-size: var(--web-font-size-h2);
@@ -119,5 +118,11 @@
   .explore-popup {
     width: 100vw !important;
     height: 100vh !important;
+  }
+
+  .web-subheading {
+    font-size: var(--web-font-size-h2);
+    font-weight: var(--web-font-weight-medium);
+    line-height: 35px;
   }
 }

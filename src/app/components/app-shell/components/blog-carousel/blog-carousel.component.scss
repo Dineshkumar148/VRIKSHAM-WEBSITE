@@ -1,0 +1,39 @@
+.nav-active {
+    color: #24774a;
+  }
+  
+  .card {
+    background-color: #f9fafb;
+  }
+  
+  .card-body {
+    position: relative;
+  }
+  
+  .calender-container {
+    position: absolute;
+    left: 20%;
+    z-index: 1;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    background-color: #01AB55;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-indicators button {
+    background-color: #01AB55;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #01AB55;
+  }

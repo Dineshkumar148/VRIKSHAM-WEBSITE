@@ -3,12 +3,16 @@ import { Component, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TestimonialCardComponent } from '../../components/app-shell/components/testimonial-card/testimonial-card.component';
 import { CourseCardComponentComponent } from '../../components/app-shell/components/course-card-component/course-card-component.component';
+
 import { AfterViewInit } from '@angular/core';
+
+import { BlogCarouselComponent } from '../../components/app-shell/components/blog-carousel/blog-carousel.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, TestimonialCardComponent, CourseCardComponentComponent],
+  imports: [CommonModule, RouterLink, TestimonialCardComponent, CourseCardComponentComponent, BlogCarouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
