@@ -140,3 +140,31 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+// transition for hover-link
+
+.contact-link {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 50%;
+  background-color: #24774a;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #24774a;
+  transform: scale(1.05);
+}
+
+.contact-link:hover::after {
+  width: 100%;
+  left: 0;
+}
