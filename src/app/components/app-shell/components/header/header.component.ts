@@ -10,5 +10,12 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isDropdownOpen = false;
+
+  toggleDropdown(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
 }

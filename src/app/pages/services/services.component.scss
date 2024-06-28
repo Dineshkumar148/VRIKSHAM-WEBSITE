@@ -5,6 +5,7 @@
 .service-card {
   background-color: #f9fafb;
   border: 1px solid #d1d5db;
+  height: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -60,4 +61,67 @@
 }
 .carousel-indicatorsP {
   background-color: #1f5d3b;
+}
+
+// scroll-animations
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// animation for heading and sub-heading
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-out;
+}
+
+.web-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.web-heading::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  transition: all 0.5s ease-out;
+}
+
+.web-heading:hover::after {
+  width: 100%;
+  left: 0;
 }
