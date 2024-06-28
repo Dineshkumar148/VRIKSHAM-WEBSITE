@@ -11,8 +11,14 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BlogListComponent } from './pages/blog-list/blog-list.component';
 import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingPageComponent },
+  { path: '', component: AppShellComponent },
+
+
   {
     path: '',
     component: AppShellComponent,
